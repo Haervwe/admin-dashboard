@@ -1,13 +1,19 @@
+body {
+  margin: 0px;
+}
+
 .container {
   height: 100vh;
   display: grid;
   grid-template-columns: minmax(200px, 1fr) minmax(600px, 4fr);
   grid-template-rows: minmax(3em, 0.5fr) minmax(5em, 0.5fr) 4fr;
   box-sizing: border-box;
+  margin: 0px;
 }
 .container .sidebar {
   grid-row: 1/4;
   display: grid;
+  background-color: rgb(0, 159, 253);
   grid-template-rows: 1fr 1fr 3fr 1fr 2fr;
 }
 .container .sidebar .logo {
@@ -32,6 +38,8 @@
 .container .search-bar .search {
   display: grid;
   grid-template-columns: 0.5fr 5fr;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
 }
 .container .search-bar .search input {
@@ -44,10 +52,12 @@
 }
 .container .user-bar {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr;
 }
 .container .user-bar .greet {
   grid-column: 1/2;
+  display: grid;
+  grid-template-columns: auto 1fr;
 }
 .container .user-bar .options {
   grid-column: 3/4;
@@ -60,4 +70,20 @@
 .container .user-bar .options button {
   height: 2em;
   border-radius: 20px;
+  width: 6em;
+  border: none;
+  background-color: rgb(0, 159, 253);
+}
+.container .dashboard {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 3fr 1fr;
+  background-color: rgb(235, 235, 238);
+}
+.container .dashboard .project-board {
+  display: grid;
+  padding: 10px;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: minmax(250px, 1fr);
 }/*# sourceMappingURL=style.css.map */
