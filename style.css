@@ -1,0 +1,63 @@
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) minmax(600px, 4fr);
+  grid-template-rows: minmax(3em, 0.5fr) minmax(5em, 0.5fr) 4fr;
+  box-sizing: border-box;
+}
+.container .sidebar {
+  grid-row: 1/4;
+  display: grid;
+  grid-template-rows: 1fr 1fr 3fr 1fr 2fr;
+}
+.container .sidebar .logo {
+  grid-row: 1/2;
+  display: flex;
+}
+.container .sidebar .nav {
+  grid-row: 3/4;
+  list-style: none;
+  display: grid;
+}
+.container .sidebar .settings {
+  grid-row: 5/6;
+  list-style: none;
+  display: grid;
+}
+.container .search-bar {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 10px;
+}
+.container .search-bar .search {
+  display: grid;
+  grid-template-columns: 0.5fr 5fr;
+  gap: 10px;
+}
+.container .search-bar .search input {
+  height: 1.5em;
+  border-radius: 20px;
+}
+.container .search-bar .user {
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr;
+}
+.container .user-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.container .user-bar .greet {
+  grid-column: 1/2;
+}
+.container .user-bar .options {
+  grid-column: 3/4;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  align-content: center;
+  padding: 0px 10px;
+}
+.container .user-bar .options button {
+  height: 2em;
+  border-radius: 20px;
+}/*# sourceMappingURL=style.css.map */
